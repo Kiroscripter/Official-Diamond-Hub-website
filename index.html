@@ -8,34 +8,41 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #000000;
+      background: #0a0f1c;
+      color: #ffffff;
       line-height: 1.6;
     }
     header {
-      background: linear-gradient(90deg, #0ea5e9, #0284c7);
-      color: white;
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px 30px;
       font-family: "Gotham Black", sans-serif;
-      font-size: 3rem;
+      font-size: 4rem;
+      color: #0ea5e9;
+      text-shadow: 0 0 20px #0ea5e9, 0 0 40px #0284c7;
+      letter-spacing: 2px;
     }
     section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
       font-size: 1.1rem;
     }
-    .highlight {
+    h2 {
       color: #0ea5e9;
-      font-weight: bold;
+      text-shadow: 0 0 12px #0ea5e9;
+      margin-top: 40px;
     }
     .feature {
-      margin: 20px 0;
+      margin: 15px 0;
       padding: 15px;
       border-left: 4px solid #0ea5e9;
-      background: #f9f9f9;
+      background: #121a2b;
       border-radius: 6px;
+      box-shadow: 0 0 8px #0ea5e955;
+    }
+    .highlight {
+      color: #38bdf8;
+      font-weight: bold;
     }
     .fade-in {
       opacity: 0;
@@ -48,22 +55,24 @@
     }
     .buttons {
       text-align: center;
-      margin: 40px 0;
+      margin: 50px 0;
     }
     button {
-      background: #0ea5e9;
+      background: linear-gradient(90deg, #0284c7, #0ea5e9);
       color: white;
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: bold;
       border: none;
       border-radius: 8px;
-      padding: 12px 20px;
+      padding: 14px 24px;
       margin: 10px;
       cursor: pointer;
-      transition: background 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 0 15px #0ea5e955;
     }
     button:hover {
-      background: #0284c7;
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px #0ea5e9;
     }
   </style>
 </head>
@@ -73,42 +82,44 @@
 
   <section>
     <p class="fade-in">
-      <span class="highlight">Diamond Hub</span> is a powerful script created by <span class="highlight">Kiro</span>, designed to enhance your Roblox experience.  
-      It currently supports two games: <span class="highlight">Forsaken</span> and <span class="highlight">Die of Death</span>, making it a versatile choice for players who want more control and exciting features.
+      <span class="highlight">Diamond Hub</span> is a next-generation Roblox script created by <span class="highlight">Kiro</span>.  
+      It supports <span class="highlight">Forsaken</span> and <span class="highlight">Die of Death</span>, providing advanced automation and combat features.
     </p>
-  </section>
 
-  <section>
-    <h2 class="fade-in highlight">Features</h2>
-
+    <h2 class="fade-in">⚔️ Forsaken Features</h2>
     <div class="feature fade-in">
-      <strong class="highlight">Stamina Automation</strong> – This feature ensures you never run out of stamina by automatically keeping it full. It removes the hassle of managing stamina so you can stay in action nonstop.
+      <strong class="highlight">Automation</strong> – Handles farming and repetitive gameplay tasks for you, letting you focus on strategy and fun.
+    </div>
+    <div class="feature fade-in">
+      <strong class="highlight">Skins [Beta]</strong> – Experiment with unique looks to stand out in Forsaken.
+    </div>
+    <div class="feature fade-in">
+      <strong class="highlight">Settings & Optimization</strong> – Customize and optimize performance for smoother gameplay.
     </div>
 
+    <h2 class="fade-in">💀 Die of Death Features</h2>
     <div class="feature fade-in">
-      <strong class="highlight">Automation</strong> – Handles repetitive gameplay tasks for you, such as farming, feeding, or grinding. This allows you to focus on progress and enjoyment instead of boring repetition.
+      <strong class="highlight">Stamina Automation</strong> – Automatically keeps stamina full,  
+      <em class="highlight">(currently not working)</em>.
     </div>
-
     <div class="feature fade-in">
-      <strong class="highlight">AimBot</strong> – Helps you lock onto enemies with precision and speed. It significantly improves accuracy, making it easier to win battles against other players.
+      <strong class="highlight">ESP</strong> – See players and important objects through walls, giving you a big advantage.
     </div>
-
     <div class="feature fade-in">
-      <strong class="highlight">Skins [Beta]</strong> – Personalize your look with experimental skins. While still in development, it allows you to stand out and enjoy a unique style.
+      <strong class="highlight">Aimbot</strong> – Locks onto enemies with precision for faster wins.
     </div>
-
     <div class="feature fade-in">
-      <strong class="highlight">Settings & Optimization</strong> – Advanced controls let you adjust performance and visuals for your device. Optimization ensures smooth gameplay even on lower-end setups.
+      <strong class="highlight">Settings & Optimization</strong> – Adjust visuals and performance for Die of Death specifically.
     </div>
   </section>
 
   <div class="buttons fade-in">
-    <button onclick="copyScript()">Copy Script</button>
-    <button onclick="downloadScript()">Download Script</button>
+    <button onclick="copyScript()">📋 Copy Script</button>
+    <button onclick="downloadScript()">⬇️ Download Script</button>
   </div>
 
   <script>
-    // Fade-in scroll effect
+    // Fade-in on scroll
     const elements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
